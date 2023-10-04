@@ -1,8 +1,15 @@
 package hello.springstart.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Member {
 
-    private Long id; // system에서 정하는 임의값
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // db에서 정하는 임의값
     private String name;
 
     public Long getId() {
