@@ -1,10 +1,7 @@
 package hello.springstart.service;
 
 import hello.springstart.domain.Member;
-import hello.springstart.repository.MemberRepository;
 import hello.springstart.repository.MemoryMemberRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,8 +14,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Transactional // 테스트가 끝나면 롤백 해줘서 db가 깨끗해짐
 public class MemberServiceIntegrationTest {
 
-    @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
+    @Autowired
+    MemberService memberService;
+    @Autowired
+    MemoryMemberRepository memberRepository;
 
     @Test
     void 회원가입() {

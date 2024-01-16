@@ -1,14 +1,10 @@
 package hello.springstart.service;
 
 import hello.springstart.domain.Member;
-import hello.springstart.repository.MemberRepository;
 import hello.springstart.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
